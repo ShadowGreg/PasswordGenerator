@@ -24,7 +24,7 @@
                 <CheckBox Margin="3" x:Name="first" >Цифры</CheckBox>
                 <CheckBox Margin="3" Name="second">Прописные буквы</CheckBox>
                 <CheckBox Margin="3" Name="therd">Строчные буквы</CheckBox>
-                <CheckBox Margin="3" Name="fourth">Спц. символы</CheckBox>
+                <CheckBox Margin="3" Name="fourth">Спец. символы</CheckBox>
             </StackPanel>
         </GroupBox>
         <GroupBox Grid.Row="1" Grid.Column="1" Padding="5" Header="Длина пароля" Margin="0,10,0,10" Grid.ColumnSpan="2">
