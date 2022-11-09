@@ -5,40 +5,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PasswordGenerator"
         mc:Ignorable="d"
-        Title="PasswordGenerator" Height="450" Width="240">
+        Title="PasswordGenerator" Height="533" Width="199">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="5"></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="4*"></ColumnDefinition>
+            <ColumnDefinition Width="185*"/>
             <ColumnDefinition Width="5"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition Height="200"></RowDefinition>
-            
+            <RowDefinition Height="155"></RowDefinition>
+            <RowDefinition Height="85"/>
+            <RowDefinition Height="225"/>
+
         </Grid.RowDefinitions>
-        <GroupBox x:Name="GroupBox" Grid.Column="1" Header="Выбор символов кода" Padding="5" Height="120">
-            <StackPanel>
+        <GroupBox x:Name="GroupBox" Grid.Column="1" Header="Выбор символов кода" Padding="5" Margin="0,10,0,10" Grid.ColumnSpan="2">
+            <StackPanel Margin="0,10,0,10">
                 <CheckBox Margin="3" x:Name="first" >Цифры</CheckBox>
                 <CheckBox Margin="3" Name="second">Прописные буквы</CheckBox>
                 <CheckBox Margin="3" Name="therd">Строчные буквы</CheckBox>
                 <CheckBox Margin="3" Name="fourth">Спц. символы</CheckBox>
             </StackPanel>
         </GroupBox>
-        <GroupBox Grid.Row="1" Grid.Column="1" Padding="5" Height="70">
+        <GroupBox Grid.Row="1" Grid.Column="1" Padding="5" Header="Длина пароля" Margin="0,10,0,10" Grid.ColumnSpan="2">
             <StackPanel>
-                <Label>Длина пароля</Label>
-                <TextBox DataContext="6" Width="30" Name="PasswordLenght">6</TextBox>
+                <TextBox DataContext="6" Width="30" Name="PasswordLenght" Margin="0,10,0,0">6</TextBox>
             </StackPanel>
         </GroupBox>
-        <GroupBox Grid.Row="2" Grid.Column="1" Padding="5">
-            <StackPanel>
-                <Button Grid.Column="1" Grid.Row="2" Width="90" Height="20" Click="CreatePassword">Создать пароль</Button>
+        <GroupBox Grid.Row="2" Grid.Column="1" Padding="5" Margin="0,10,0,-12" Header="Скопируйте нужный пароль" Grid.ColumnSpan="2">
+            <StackPanel Height="190">
+                <Button Grid.Column="1" Grid.Row="2" Width="90" Height="20" Click="CreatePassword" Margin="0,10,0,0">Создать пароль</Button>
                 <TextBox
-                    Width="150" x:Name="TextBox" 
-                    AcceptsReturn="True" 
-                    ></TextBox>
+                    Width="149" x:Name="TextBox" 
+                    AcceptsReturn="True" Margin="0,10,0,0" Height="140" TextWrapping="Wrap" 
+                    />
             </StackPanel>
         </GroupBox>
     </Grid>
